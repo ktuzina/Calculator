@@ -12,25 +12,25 @@ public class Calculator {
 
     public float addition(){
         float result = 0;
-        result = this.value1 + this.value2;
+        result = value1 + value2;
         return result;
     }
 
     public float subtraction(){
         float result = 0;
-        result = this.value1 - this.value2;
+        result = value1 - value2;
         return result;
     }
 
     public float multiplication(){
         float result = 0;
-        result = this.value1 * this.value2;
+        result = value1 * value2;
         return result;
     }
 
     public float division(){
         float result = 0;
-        result = this.value1 / this.value2;
+        result = value1 / value2;
         return result;
     }
 }

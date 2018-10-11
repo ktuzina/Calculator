@@ -9,7 +9,7 @@ public class Main {
         String operation = "";
         Scanner sc = new Scanner(System.in);
 
-        while (isRepeat){
+        while (isRepeat) {
 
             System.out.println("Please, type 1st value:");
             float value1 = sc.nextFloat();
@@ -20,7 +20,7 @@ public class Main {
             operation = sc.next();
             Calculator calc = new Calculator(value1, value2);
             float result = 0;
-            switch (operation){
+            switch (operation) {
                 case "+":
                     result = calc.addition();
                     break;
@@ -37,17 +37,20 @@ public class Main {
 
             System.out.println("Result is: " + result);
 
-            String continue_answer = "";
-            do {
-                System.out.println("Do you want to continue? (yes/no)");
-                continue_answer = sc.next();
-                if (continue_answer.equals("no")) {
+            String continueAnswer = "";
+            System.out.println("Do you want to continue? (yes/no)");
+            continueAnswer = sc.next();
+            switch (continueAnswer) {
+                case "yes":
+                    isRepeat = true;
+                    break;
+                case "no":
                     isRepeat = false;
-                } else if (!continue_answer.equals("yes")) {
+                    break;
+                default:
                     System.out.println("Answer only 'yes' or 'no'");
-                }
-            } while (!continue_answer.equals("yes") && !continue_answer.equals("no"));
-
+                    break;
+            }
         }
     }
 }
